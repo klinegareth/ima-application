@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  background-color: #282c34;
+  min-height: 50vh;
+  min-width: 30vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.reveal {
+	color: rgba(0,0,0,0);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-size: calc(10px + 1vmin);
+	transition: all 0.2s ease-out;
+}
+
+.reveal:hover, .reveal:focus {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgba(255, 255, 255, 1);
+}
