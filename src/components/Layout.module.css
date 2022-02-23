@@ -1,19 +1,24 @@
+html, body {
+	scroll-snap-type: y mandatory;
+
+}
 .container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+	background-color: black;
+	min-height: 100vh;
+	max-height: 100vh;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	scroll-snap-align: start;
 }
 
 .content {
-  color: #61dafb;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+	color: #61dafb;
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 }
 
-.content > img {
-	grid-template-columns: 1 ;
+.Chevron {
+	grid-template-row: 2/-1;
 }

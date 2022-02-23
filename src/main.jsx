@@ -7,12 +7,14 @@ import Layout from './components/Layout'
 
 ReactDOM.render(
   <React.StrictMode>
-	<Layout>
-		<Chevron />
-	</Layout>
     <Layout> 
 		<Card />
 		<Card />
+	</Layout>
+	<Layout>
+		<Card hoverTitle="anchor" hoverText="This was a project for dot dot dot etc etc etc" linkTo="https://anchor.klinegareth.com"/>
+		<Card />
+		<Chevron />
 	</Layout>
     <Layout> 
 		<Card />

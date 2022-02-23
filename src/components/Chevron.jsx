@@ -4,7 +4,7 @@ import * as css from './Chevron.module.css';
 
 const Chevron = () => {
 	return (
-		<img src={chevron}/>
+		<img className={css.Chevron} src={chevron}/>
 	)
 }
 
