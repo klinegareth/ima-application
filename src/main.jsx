@@ -1,25 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import Card from './components/Card'
 import Chevron from './components/Chevron'
 import Layout from './components/Layout'
+import Deck from './components/Deck'
+import Background from './components/Background'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Layout /> 
     <Layout> 
-		<Card />
-		<Card />
-	</Layout>
-	<Layout>
-		<Card hoverTitle="anchor" hoverText="This was a project for dot dot dot etc etc etc" linkTo="https://anchor.klinegareth.com"/>
-		<Card />
 		<Chevron />
+		<Deck>
+			<Card />
+			<Card />
+			<Card />
+		</Deck>
 	</Layout>
-    <Layout> 
-		<Card />
-		<Card />
-	</Layout>
+	<Background />
   </React.StrictMode>,
   document.getElementById('root')
 )

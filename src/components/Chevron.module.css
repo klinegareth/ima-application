@@ -1,29 +1,29 @@
 .Chevron {
-	--starting-position-top: 80%;
+	--starting-position-top: 80vh;
 	position: relative;
+	margin: 0;
 	left: 50%;
-	top: var(--starting-position-top);
 	transform: translate(-50%);
+	top: var(--starting-position-top);
 	width: 5vh;
 	animation:pulldown 5s infinite;
-    -moz-animation:pulldown 5s infinite; /* Firefox */
-    -webkit-animation:pulldown 5s infinite; /* Safari and Chrome */               
+    -moz-animation: pulldown 5s infinite; /* Firefox */
+    -webkit-animation: pulldown 5s infinite; /* Safari and Chrome */               
 }
-
 
 @keyframes pulldown{
     0% {top: var(--starting-position-top);} 
-    50%{top: calc(var(--starting-position-top) + 30px);} 
+    50%{top: calc(var(--starting-position-top) + 5vh);} 
     100% {top: var(--starting-position-top);} 
 }
 @-moz-keyframes pulldown{
     0% {top: var(--starting-position-top);} 
-    50%{top: calc(var(--starting-position-top) + 30px);} 
+    50%{top: calc(var(--starting-position-top) + 5vh);} 
     100% {top: var(--starting-position-top);} 
 }
 @-webkit-keyframes pulldown{
     0% {top: var(--starting-position-top);} 
-    50%{top: calc(var(--starting-position-top) + 30px);} 
+    50%{top: calc(var(--starting-position-top) + 5vh);} 
     100% {top: var(--starting-position-top);} 
 }
 

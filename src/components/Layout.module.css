@@ -1,24 +1,20 @@
 html, body {
 	scroll-snap-type: y mandatory;
-
+	margin: auto;
 }
+
 .container {
-	background-color: black;
+	background-color: rgba(0,0,0,0);
 	min-height: 100vh;
 	max-height: 100vh;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
 	scroll-snap-align: start;
+	position: absoute;
+	top: 0;
+	left: 0;
+	bottom: 0;
 }
 
 .content {
-	color: #61dafb;
-	position: absolute;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
+	position: absoute;
 }
 
-.Chevron {
-	grid-template-row: 2/-1;
-}

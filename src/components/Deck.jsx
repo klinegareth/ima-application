@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import * as css from './Layout.module.css'
+import * as css from './Deck.module.css'
 
-const Layout = ({ children }) => {
+const Deck = ({ children }) => {
 	return (
 		<div className={css.container}>
 			<div className={css.content}>
@@ -11,4 +11,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout
+export default Deck
