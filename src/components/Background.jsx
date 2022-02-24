@@ -11,9 +11,14 @@ let stars = [];
 
 export default (props) => {
 
+	const preload = (p5) => {
+		CozetteVector = p5.loadFont('/src/fonts/CozetteVector.ttf')
+	};
+
 	const setup = (p5, canvasParentRef) => {
 		p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
 		p5.frameRate(10);
+		p5.textFont(CozetteVector);
 		for(let i = 0; i < p5.width/75; i++) {
 			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(0, 2)), p5))
 		}	
@@ -71,5 +76,5 @@ export default (props) => {
 	};
 	 
 
-	return <Sketch className={css.Background} setup={setup} windowResized={windowResized} draw={draw} />
+	return <Sketch className={css.Background} preload={preload} setup={setup} windowResized={windowResized} draw={draw} />
 }
