@@ -1,10 +1,16 @@
+@font-face {
+	font-family: Cozette;
+	src: url('/src/fonts/CozetteVector.ttf');
+}
+
 html, body {
 	scroll-snap-type: y mandatory;
 	margin: auto;
+	font-family: Cozette;
 }
 
 .container {
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0.25);
 	min-height: 100vh;
 	max-height: 100vh;
 	scroll-snap-align: start;

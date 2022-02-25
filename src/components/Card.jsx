@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import * as css from './Card.module.css';
 
 export const Card = ({
+	title,
 	hoverTitle,
 	hoverText,
 	linkTo
@@ -11,8 +12,10 @@ export const Card = ({
 
 	return (
 		<div className={css.Card}>
-				title
-			<a href={linkTo}>
+			<header>
+				{title}
+			</header>
+			<a href={linkTo} target="_blank" rel="noopener noreferrer">
 				<div className={css.reveal}>
 					<header className={css.revealTitle}>{hoverTitle}</header>
 					<p className={css.revealText}> {hoverText} </p>

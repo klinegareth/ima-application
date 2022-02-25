@@ -1,12 +1,15 @@
 .container {
-	position: absoute;
+	position: relative;
+	top: 50%;
+	transform: translateY(50%);
 }
 
 .content {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	gap: 5px;
-	justify-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	gap: 10%;
+	display: grid;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 

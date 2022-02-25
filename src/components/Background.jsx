@@ -17,17 +17,16 @@ export default (props) => {
 
 	const setup = (p5, canvasParentRef) => {
 		p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
-		p5.frameRate(10);
 		p5.textFont(CozetteVector);
-		for(let i = 0; i < p5.width/75; i++) {
-			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(0, 2)), p5))
+		for(let i = 0; i < p5.width/50; i++) {
+			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(1, 25)), p5))
 		}	
 	};
 
 	const windowResized = (p5, canvasParentRef) => {
 		stars = [];
-		for(let i = 0; i < p5.width/75; i++) {
-			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(0, 2)), p5))
+		for(let i = 0; i < p5.width/50; i++) {
+			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(1, 25)), p5))
 		}	
 		p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
 	};
@@ -35,34 +34,75 @@ export default (props) => {
 	class Star {
 		constructor(ch, x, y, z, p5) {
 			this.ch = ch;
-			this.x = x;
-			this.y = y;
+			this.pos = p5.createVector(x, y);
+			this.vel = p5.createVector(p5.random(-1,1), p5.random(-1,1));
+			this.acc = p5.createVector(0, 0);
+			this.size = 8 + z;
 			this.z = z;
-			this.alpha = 0;
+			this.alpha = 10*z;
 			this.p5 = p5;
+			this.wanderTheta = this.p5.PI/2;
+			this.maxForce = 0.1;
+			this.maxSpeed = this.size / 20;
+		};
 
+		wander () {
+			let wanderPoint = this.vel.copy();
+			wanderPoint.setMag(100);
+			wanderPoint.add(this.pos);
+			// fill(255,0,0);
+			// circle(wanderPoint.x,wanderPoint.y,8);
+			
+			let wanderRadius = this.size;
+			// noFill();
+			// stroke(255);
+			// circle(wanderPoint.x, wanderPoint.y, wanderRadius*2);
+			
+			let theta = this.wanderTheta + this.vel.heading();
+			
+			let x = wanderRadius * this.p5.cos(theta);
+			let y = wanderRadius * this.p5.sin (theta);
+			// fill(0,255,0);
+			wanderPoint.add(x, y);
+			// circle(wanderPoint.x, wanderPoint.y, 8)
+			
+			let steer = wanderPoint.sub(this.pos);
+			steer.setMag(this.maxForce);
+			this.applyForce(steer);
+			
+			let displaceRange = 0.5
+			this.wanderTheta += this.p5.random(-displaceRange,displaceRange);
 		}
-		
+
+		applyForce(force) {
+			this.acc.add(force);
+		}
+
 		update(ch) {
-			this.p5.noiseSeed(this.p5.random(1000));
-			this.ch = ch;
-			if(this.z <= 2) {
-				this.x += this.p5.random(-0.5, 0.5);
-				this.y += this.p5.random(-0.5, 0.5);
-			if (this.z <= 1) {
-				this.x += this.p5.random(-1, 1);
-				this.y += this.p5.random(-1, 1);
-			} else {
-				this.x += this.p5.random(-2, 2);
-				this.y += this.p5.random(-2, 2);
-				}
+			if(this.p5.frameCount % 10 == 0) {
+				this.ch = ch;
+			}
+			this.vel.add(this.acc);
+			this.vel.limit(this.maxSpeed);
+			this.pos.add(this.vel);
+			this.acc.set(0,0);
+			if(this.pos.x >= this.p5.width + this.size) {
+				this.pos.x = 5;
+			} else if (this.pos.x <= 0 - this.size) {
+				this.pos.x = this.p5.width;
+			};
+
+			if(this.pos.y >= this.p5.height + this.size) {
+				this.pos.y = 5;
+			} else if (this.pos.y <= 0 - this.size) {
+				this.pos.y = this.p5.height;
 			}
 		}
 
 		draw() {
-			this.p5.fill(255, 255, 255);
-			this.p5.textSize(18);
-			this.p5.text(this.ch, this.x, this.y);
+			this.p5.fill(255, 255, 255, this.alpha);
+			this.p5.textSize(this.size);
+			this.p5.text(this.ch, this.pos.x, this.pos.y);
 		}
 	};
 
@@ -70,8 +110,9 @@ export default (props) => {
 		p5.background(0);
 		p5.fill(0);
 		for(let i = 0; i < stars.length; i++) {
-			stars[i].draw();
 			stars[i].update(starChars[p5.floor(p5.random(0,7))]);
+			stars[i].draw();
+			stars[i].wander();
 		}
 	};
 	 
