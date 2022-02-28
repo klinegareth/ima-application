@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import * as css from './YoutubeEmbed.module.css'
 
-const YoutubeEmbed = ({ embedId }) => (
+const YoutubeEmbed = ({ embedId, w, h }) => (
   <div className="video-responsive">
     <iframe
-      width="853"
-      height="480"
+      width={`${w}`}
+      height={`${h}`}
       src={`https://www.youtube.com/embed/${embedId}`}
       frameBorder="0"
       allowFullScreen

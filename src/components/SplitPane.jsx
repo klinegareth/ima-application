@@ -38,16 +38,16 @@ export const SplitPaneLeft = (props) => {
 	const { videos, setCurrVideo } = useContext(ContentContext);
 
 	return (
-		<div {...props} className="split-pane-left">
+		<div {...props} className={css.splitpaneleft}>
 			<h1>Videos</h1>
-			<div className="video-list">
+			<div className={css.videolist}>
 				{videos.map((el, i) => {
 					return (
-						<li key={i}>
+						<div key={i} className={css.videolistitem}>
 							<a href="#" onClick={() => setCurrVideo(el.id)}>
 								{el.title}
 							</a>
-						</li>
+						</div>
 					);
 				})}
 			</div>
@@ -61,8 +61,14 @@ export const SplitPaneRight = (props) => {
 
 	return (
 		<div {...props} className={css.splitpaneright}>
+			<div className={css.videotitle}>
+				<h1>{video.title}</h1>
+			</div>
 			<div className={css.video}>
-				<YoutubeEmbed embedId={video.videoId} />
+				<YoutubeEmbed embedId={video.videoId} w={853} h={480}/>
+			</div>
+			<div className={css.videodescription}>
+			<p> {video.description} </p>
 			</div>
 		</div>
 	);

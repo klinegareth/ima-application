@@ -1,11 +1,13 @@
 .splitpane {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.1);
-  font-size: calc(10px + 2vmin);
+  width: 80%;
+  max-width: 100%;
+  height: 80%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
   color: rgba(255, 255, 255, 255);
   border-style: dashed;
   border-width: 1px;
@@ -13,16 +15,121 @@
 }
 
 .splitpaneleft {
-	position:
-
+	position: relative;
+	font-size: calc(1em + 1vmin);
+	width: 30%;
+	max-width: 30%;
+	height: auto;
+	border-radius: 8px 0px 0px 8px;
+	border-right: 1px dashed white;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .splitpaneright {
+	position: relative;
+	width: 70%;
+	max-width: 70%;
+	height: 100%;
+	max-height: 100%;
+	border-radius: 0px 8px 8px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.splitpaneleft h1 {
+	border-bottom: 1px dashed white;
+	margin-bottom: 0; margin-top: 0;
+}
+.videolistitem {
+	border-bottom: 1px dashed white;
+}
+
+.videolistitem:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.videolistitem a {
+	color: white;
+}
+
+.vidolist {
 
 }
 
 .video {
 	position: relative;
-	display: block;
-	width: 10%;
+	max-width: 90%;
+	max-height: 80%;
+}
+
+.video iframe {
+	flex: 1;
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+	.splitpane {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 90%;
+		max-width: 100%;
+		height: 90%;
+		max-height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) ;
+		color: rgba(255, 255, 255, 255);
+		border-style: dashed;
+		border-width: 1px;
+		border-radius: 8px;
+	}
+
+	.splitpaneleft {
+		position: relative;
+		font-size: calc(1em + 1vmin);
+		width: 100%;
+		max-width: 100%;
+		height: 25%;
+		border-radius: 0px 0px 0px 0px;
+		border-top: 2px dashed white;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.splitpaneright {
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0px 8px 8px 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.video {
+		position: relative;
+		min-width: 100%;
+		min-height: 50px;
+	}
+
+	.video iframe {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.videodescription {
+
+	}
+
+	.videotitle {
+	}
+	
 }
