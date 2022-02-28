@@ -8,9 +8,16 @@ import Background from './components/Background';
 
 ReactDOM.render(
   <React.StrictMode>
+	<Layout>
+		<Chevron />
+	</Layout>
+	<Layout>
+		<Card />
+		<Card />
+		<Card />
+	</Layout>
 	<App />
 	<Layout> 
-		<Chevron />
 	</Layout>
 	<Background />
   </React.StrictMode>,

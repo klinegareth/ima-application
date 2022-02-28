@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import React, { useState, useEffect, useNavigate } from 'react';
 import YoutubeEmbed from './YoutubeEmbed';
 import SplitPane, {
 	SplitPaneLeft,

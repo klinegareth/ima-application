@@ -14,6 +14,7 @@ import {videos} from '../content/videos';
 
 import * as css from './App.module.css'
 
+
 const SplitPane = ({ children, ...props }) => {
 	const [clientHeight, setClientHeight] = useState(null);
 	const [clientWidth, setClientWidth] = useState(null);
@@ -35,6 +36,22 @@ const SplitPane = ({ children, ...props }) => {
 };
 
 export const SplitPaneLeft = (props) => {
+
+	/* const [scrollPosition, setScrollPosition] = useState(0);
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollPosition(position);
+	};
+
+	useEffect(() => {
+		console.log(scrollPosition);
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []); */
+
 	const { videos, setCurrVideo } = useContext(ContentContext);
 
 	return (

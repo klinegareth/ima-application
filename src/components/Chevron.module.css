@@ -2,8 +2,6 @@
 	--starting-position-top: 80vh;
 	position: relative;
 	margin: 0;
-	left: 50%;
-	transform: translate(-50%);
 	top: var(--starting-position-top);
 	width: 5vh;
 	animation:pulldown 5s infinite;
