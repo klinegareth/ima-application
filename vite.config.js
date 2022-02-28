@@ -1,13 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import resolve from '@rollup/plugin-node-resolve';
 
+ 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
-},                           {
-  "scripts": {
-    "build": "vite build",
-    "preview": "vite preview"
-  }
-}
-)
+	plugins: [react(), resolve({
+		customResolveOptions: {
+			moduleDirectories: ['node_modules']
+		}
+	  })
+	],
+  build: {
+		chunkSizeWarningLimit: 1600,
+	},
+
+});

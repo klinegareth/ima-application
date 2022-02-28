@@ -45,6 +45,7 @@
 }
 .videolistitem {
 	border-bottom: 1px dashed white;
+	transition: all 0.2s ease-out;
 }
 
 .videolistitem:hover {
@@ -55,7 +56,7 @@
 	color: white;
 }
 
-.vidolist {
+.videolist {
 
 }
 
@@ -115,18 +116,18 @@
 		background-color: rgba(255, 255, 255, 0.1);
 	}
 
-.video {
-	flex: 1;
-	position: relative;
-	width: 100%;
-	height: 10%;
-}
+	.video {
+		flex: 1;
+		position: relative;
+		width: 100%;
+		height: 10%;
+	}
 
-.video iframe {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
+	.video iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
 
 	.videodescription {
 

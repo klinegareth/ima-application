@@ -1,21 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import Sketch from 'react-p5';
+import Cozette from '/src/fonts/CozetteVector.ttf';
 import * as css from './Background.module.css'
 
-
-let CozetteVector;
 
 let starChars = ['*', '+', ':', '*', '-', '~', '¤'];
 let stars = [];
 
+let CozetteVector;
 
 export default (props) => {
 
-	const preload = (p5) => {
-		CozetteVector = p5.loadFont('/src/fonts/CozetteVector.ttf')
-	};
-
 	const setup = (p5, canvasParentRef) => {
+		CozetteVector = p5.loadFont(Cozette)
 		p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
 		p5.textFont(CozetteVector);
 		for(let i = 0; i < p5.width/50; i++) {
@@ -24,10 +21,9 @@ export default (props) => {
 	};
 
 	const windowResized = (p5, canvasParentRef) => {
-		stars = [];
-		for(let i = 0; i < p5.width/50; i++) {
+		while(stars.length < p5.width/50) {
 			stars.push(new Star(starChars[p5.floor(p5.random(0,7))], p5.random(0, p5.width), p5.random(0, p5.height), p5.floor(p5.random(1, 25)), p5))
-		}	
+		};
 		p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
 	};
 
@@ -117,5 +113,5 @@ export default (props) => {
 	};
 	 
 
-	return <Sketch className={css.Background} preload={preload} setup={setup} windowResized={windowResized} draw={draw} />
+	return <Sketch className={css.Background} setup={setup} windowResized={windowResized} draw={draw} />
 }

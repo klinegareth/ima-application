@@ -1,0 +1,27 @@
+.TextBox {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	min-height: 80%;
+	max-height: 100%;
+	margin: 0;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	color: rgba(255, 255, 255, 255);
+}
+
+.TextBox h1 {
+	font-size: calc(48px + 3vw);
+}
+
+.TextBox p {
+	font-size: calc(28px + 1vw);
+}
+
+.imah1 {
+}
+
+.imap {
+	font-size: calc(12px + 1vw) !important;
+}

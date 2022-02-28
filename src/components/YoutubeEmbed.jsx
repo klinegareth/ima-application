@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import * as css from './YoutubeEmbed.module.css';
 
 const YoutubeEmbed = ({ embedId, w, h }) => (
@@ -14,9 +13,5 @@ const YoutubeEmbed = ({ embedId, w, h }) => (
     />
   </div>
 );
-
-YoutubeEmbed.propTypes = {
-  embedId: PropTypes.string.isRequired
-};
 
 export default YoutubeEmbed;
