@@ -12,6 +12,8 @@ cd dist
 # if you are deploying to a custom domain
 echo 'ima.klinegareth.com' > CNAME
 
+git config user.email "klinegareth@gmail.com"
+git config user.name "Kline"
 git init
 git checkout -b main
 git add -A
