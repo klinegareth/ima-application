@@ -31,5 +31,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Script
-        run: $GITHUB_WORKSPACE/deploy.sh
+        run: deploy.sh
         shell: bash
