@@ -28,8 +28,5 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-
-      # Runs a single command using the runners shell
-      - name: Script
-        run: /deploy.sh
-        shell: bash
+      - run: npm run build
+      - run: npm run preview
