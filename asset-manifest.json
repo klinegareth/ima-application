@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "https://ima.klinegareth.com/static/css/main.d2ea4a04.css",
-    "main.js": "https://ima.klinegareth.com/static/js/main.a7849d7a.js",
-    "static/media/CozetteVector.ttf": "https://ima.klinegareth.com/static/media/CozetteVector.4536f66ec0210cec13ac.ttf",
-    "index.html": "https://ima.klinegareth.com/index.html",
-    "main.d2ea4a04.css.map": "https://ima.klinegareth.com/static/css/main.d2ea4a04.css.map",
-    "main.a7849d7a.js.map": "https://ima.klinegareth.com/static/js/main.a7849d7a.js.map"
+    "main.css": "/ima.klinegareth.com/static/css/main.00e33682.css",
+    "main.js": "/ima.klinegareth.com/static/js/main.e24d8e22.js",
+    "static/media/CozetteVector.ttf": "/ima.klinegareth.com/static/media/CozetteVector.4536f66ec0210cec13ac.ttf",
+    "index.html": "/ima.klinegareth.com/index.html",
+    "main.00e33682.css.map": "/ima.klinegareth.com/static/css/main.00e33682.css.map",
+    "main.e24d8e22.js.map": "/ima.klinegareth.com/static/js/main.e24d8e22.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2ea4a04.css",
-    "static/js/main.a7849d7a.js"
+    "static/css/main.00e33682.css",
+    "static/js/main.e24d8e22.js"
   ]
 }
