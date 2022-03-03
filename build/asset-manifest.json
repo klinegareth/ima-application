@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af16d7f9.css",
+    "main.js": "/static/js/main.e38adc67.js",
+    "static/media/CozetteVector.ttf": "/static/media/CozetteVector.4536f66ec0210cec13ac.ttf",
+    "index.html": "/index.html",
+    "main.af16d7f9.css.map": "/static/css/main.af16d7f9.css.map",
+    "main.e38adc67.js.map": "/static/js/main.e38adc67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af16d7f9.css",
+    "static/js/main.e38adc67.js"
+  ]
+}
