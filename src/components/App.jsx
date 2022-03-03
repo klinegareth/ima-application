@@ -5,9 +5,9 @@ import SplitPane, {
 	SplitPaneRight,
 } from './SplitPane';
 import ContentContext from './ContentContext';
-import { videos } from '/src/content/videos';
+import { videos } from '../content/videos';
 import Layout from './Layout';
-import * as css from './App.module.css';
+import css from './App.module.css';
 
 function App() {
 	const [currVideo, setCurrVideo] = useState(0);

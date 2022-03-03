@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import * as css from './Layout.module.css'
+import css from './Layout.module.css'
 
 const Layout = React.memo(function Layout({children}) {
 	return (

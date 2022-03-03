@@ -1,5 +1,5 @@
 import React from "react";
-import * as css from './YoutubeEmbed.module.css';
+import css from './YoutubeEmbed.module.css';
 
 const YoutubeEmbed = ({ embedId, w, h }) => (
   <div className="video-responsive">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as css from './Card.module.css';
+import css from './Card.module.css';
 
 export const Card = ({
 	title,

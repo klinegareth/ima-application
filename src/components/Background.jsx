@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Sketch from 'react-p5';
-import Cozette from '/src/fonts/CozetteVector.ttf';
-import * as css from './Background.module.css'
+import Cozette from '../fonts/CozetteVector.ttf';
+import css from './Background.module.css'
 
 
 let starChars = ['*', '+', ':', '*', '-', '~', '¤'];

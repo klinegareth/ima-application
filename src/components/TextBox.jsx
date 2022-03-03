@@ -1,4 +1,4 @@
-import * as css from './TextBox.module.css';
+import css from './TextBox.module.css';
 
 const TextBox = (props) => {
 	const isIMA = props.isIMA;
