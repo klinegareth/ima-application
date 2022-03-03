@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ima2/static/css/main.40dbe294.css",
+    "main.js": "/ima2/static/js/main.f81cecf6.js",
+    "static/media/CozetteVector.ttf": "/ima2/static/media/CozetteVector.4536f66ec0210cec13ac.ttf",
+    "index.html": "/ima2/index.html",
+    "main.40dbe294.css.map": "/ima2/static/css/main.40dbe294.css.map",
+    "main.f81cecf6.js.map": "/ima2/static/js/main.f81cecf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40dbe294.css",
+    "static/js/main.f81cecf6.js"
+  ]
+}
