@@ -11,8 +11,14 @@ export default defineConfig({
 		}
 	  })
 	],
-  build: {
+	build: {
 		chunkSizeWarningLimit: 1600,
 	},
+	server: {
+		https: true,
+		host: 0.0.0.0,
+		port: 8080,
+		strictPort: true
+	}
 
 });
