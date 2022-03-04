@@ -7,9 +7,9 @@ import SplitPane, {
 import ContentContext from './ContentContext';
 import { videos } from '../content/videos';
 import Layout from './Layout';
-import css from './App.module.css';
+import css from './VideoCard.module.css';
 
-function App() {
+function VideoCard() {
 	const [currVideo, setCurrVideo] = useState(0);
 
 	return (
@@ -24,4 +24,4 @@ function App() {
 	)
 }
 
-export default App;
+export default VideoCard;

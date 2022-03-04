@@ -12,7 +12,7 @@ import SplitPaneContext from './SplitPaneContext';
 import YoutubeEmbed from './YoutubeEmbed';
 import {videos} from '../content/videos';
 
-import css from './App.module.css'
+import css from './VideoCard.module.css'
 
 
 const SplitPane = ({ children, ...props }) => {
