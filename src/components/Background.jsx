@@ -38,8 +38,8 @@ export default (props) => {
 			this.alpha = 10*z;
 			this.p5 = p5;
 			this.wanderTheta = this.p5.PI/2;
-			this.maxForce = 0.1;
-			this.maxSpeed = this.size / 20;
+			this.maxForce = 0.05;
+			this.maxSpeed = this.size / 40;
 		};
 
 		wander () {

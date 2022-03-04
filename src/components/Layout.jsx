@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import css from './Layout.module.css'
 
-const Layout = React.memo(function Layout({children}) {
+const Layout = ({children}) => {
 	return (
 		<div className={css.container}>
 			<div className={css.content}>
@@ -9,7 +9,6 @@ const Layout = React.memo(function Layout({children}) {
 			</div>
 		</div>
   		)
-	}
-);
+	};
 
 export default Layout

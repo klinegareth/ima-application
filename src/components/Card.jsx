@@ -5,7 +5,8 @@ export const Card = ({
 	title,
 	hoverTitle,
 	hoverText,
-	linkTo
+	linkTo,
+	children
 }) => {
 	const [isShown, setIsShown] = useState(false);
 
@@ -14,6 +15,7 @@ export const Card = ({
 			<header>
 				{title}
 			</header>
+				{children}
 			<a href={linkTo} target="_blank" rel="noopener noreferrer">
 				<div className={css.reveal}>
 					<header className={css.revealTitle}>{hoverTitle}</header>

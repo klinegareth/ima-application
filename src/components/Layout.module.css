@@ -1,11 +1,12 @@
 @font-face {
 	font-family: Cozette;
-	src: url('/src/fonts/CozetteVector.ttf');
+	src: url('../fonts/CozetteVector.ttf');
 }
 
 html, body {
 	scroll-snap-type: y mandatory;
 	margin: auto;
+	overflow-x: clip;
 	font-family: Cozette;
 	background-color: black;
 }

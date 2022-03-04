@@ -6,7 +6,6 @@
 	max-height: 80%;
 	margin: auto;
 	position: relative;
-	justify-content: center;
 	align-items: center;
 	color: rgba(255, 255, 255, 255);
 }
@@ -16,12 +15,22 @@
 }
 
 .TextBox p {
-	font-size: calc(28px + 1vw);
+	text-align: center;
+	margin-top: 12vmin;
+	font-size: calc(30px + 1vw);
 }
 
 .imah1 {
 }
 
 .imap {
-	font-size: calc(16px + 1vmin) !important;
+	font-size: calc(18px + 1vmin) !important;
+	text-align-last: center;
+}
+
+@media screen and (max-width: 800px) {
+	.imap {
+		margin-top: 5vh !important;
+		font-size: calc(14px + 1vmin) !important;
+	}
 }
