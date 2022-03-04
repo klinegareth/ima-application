@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import VideoCard from './components/VideoCard'
 import Card from './components/Card';
@@ -7,7 +7,6 @@ import Layout from './components/Layout';
 import ColumnLayout from './components/ColumnLayout';
 import Background from './components/Background';
 import TextBox from './components/TextBox'
-import YoutubeEmbed from './components/YoutubeEmbed'
 
 ReactDOM.render(
   <React.StrictMode>
