@@ -1,11 +1,11 @@
 .TextBox {
 	display: flex;
 	flex-direction: column;
-	width: 80%;
-	min-height: 60%;
-	max-height: 80%;
-	margin: auto;
-	position: relative;
+	width: auto;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 50%;
 	align-items: center;
 	color: rgba(255, 255, 255, 255);
 }
@@ -16,11 +16,8 @@
 
 .TextBox p {
 	text-align: center;
-	margin-top: 12vmin;
+	margin: 12vmin;
 	font-size: calc(30px + 1vw);
-}
-
-.imah1 {
 }
 
 .imap {

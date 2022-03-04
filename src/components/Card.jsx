@@ -3,13 +3,10 @@ import css from './Card.module.css';
 
 export const Card = ({
 	title,
-	hoverTitle,
-	hoverText,
+	desc,
 	linkTo,
 	children
 }) => {
-	const [isShown, setIsShown] = useState(false);
-
 	return (
 		<div className={css.Card}>
 			<header>
@@ -18,8 +15,7 @@ export const Card = ({
 				{children}
 			<a href={linkTo} target="_blank" rel="noopener noreferrer">
 				<div className={css.reveal}>
-					<header className={css.revealTitle}>{hoverTitle}</header>
-					<p className={css.revealText}> {hoverText} </p>
+					<p className={css.revealText}> {desc} </p>
 				</div>
 			</a>
 		</div>
