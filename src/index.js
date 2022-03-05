@@ -8,7 +8,6 @@ import Background from './components/Background';
 import TextBox from './components/TextBox';
 import TitleBox from './components/TitleBox';
 import Deck from './components/Deck';
-import YoutubeEmbed from './components/YoutubeEmbed';
 
 ReactDOM.render(
   <React.StrictMode>

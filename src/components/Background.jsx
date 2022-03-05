@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Sketch from 'react-p5';
 import Cozette from '../fonts/CozetteVector.ttf';
 import css from './Background.module.css'
@@ -75,7 +75,7 @@ export default (props) => {
 		}
 
 		update(ch) {
-			if(this.p5.frameCount % 10 == 0) {
+			if(this.p5.frameCount % 10 === 0) {
 				this.ch = ch;
 			}
 			this.vel.add(this.acc);

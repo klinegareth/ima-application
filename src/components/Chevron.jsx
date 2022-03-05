@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import chevron from '../images/chevron.png';
 import css from './Chevron.module.css';
 
 const Chevron = () => {
 	return (
-		<img className={css.Chevron} src={chevron}/>
+		<img className={css.Chevron} alt="" src={chevron}/>
 	)
 }
 
