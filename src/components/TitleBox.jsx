@@ -4,7 +4,7 @@ const TitleBox = (props) => {
 	const isIMA = props.isIMA;
 	if (isIMA) {
 		return (
-			<div className={css.TextBox}>
+			<div className={css.IMA}>
 				<h1 className={css.imah1}>
 					{props.title}
 				</h1>
