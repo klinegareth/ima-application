@@ -3,6 +3,10 @@
 	src: url('/src/fonts/CozetteVector.ttf');
 }
 
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
 html, body {
 	scroll-snap-type: y mandatory;
 	margin: auto;
